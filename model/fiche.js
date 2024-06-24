@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        id_post: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+          },
     }, {
       tableName: 'files',
       timestamps: false,
