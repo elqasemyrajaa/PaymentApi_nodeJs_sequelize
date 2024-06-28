@@ -28,6 +28,18 @@ exports.getAllEmployees = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+exports.getEmployee = async (req, res) => {
+  try {
+  const contact = await Employee.findByPk(req.params.id);
+  if (contact) {
+  res.status(200).json(contact);
+  } else {
+  res.status(404).json({ error:Contact});
+  }
+  } catch (err) {
+  res.status(500).json(err);
+  }
+  };
 
 exports.createEmployee = async (req, res) => {
   try {
@@ -46,7 +58,18 @@ exports.getAllFiles = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+exports.getPost = async (req, res) => {
+  try {
+  const contact = await Post.findByPk(req.params.id);
+  if (contact) {
+  res.status(200).json(contact);
+  } else {
+  res.status(404).json({ error:Contact});
+  }
+  } catch (err) {
+  res.status(500).json(err);
+  }
+  };
 exports.createFile = async (req, res) => {
   try {
     const file = await File.create(req.body);

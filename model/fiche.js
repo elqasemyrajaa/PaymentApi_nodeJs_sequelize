@@ -7,11 +7,11 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
         },
         mois: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         annee: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         id_employee: {
